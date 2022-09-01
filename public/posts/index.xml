@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on poyashi.me</title>
+    <link>https://poyashi.me/posts/</link>
+    <description>Recent content in Posts on poyashi.me</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Thu, 01 Sep 2022 20:00:00 +0900</lastBuildDate><atom:link href="https://poyashi.me/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>IIJmio&#43;楽天モバイルのデュアルSIM運用からHISモバイルへ乗り換えた</title>
+      <link>https://poyashi.me/posts/his-mobile/</link>
+      <pubDate>Thu, 01 Sep 2022 20:00:00 +0900</pubDate>
+      
+      <guid>https://poyashi.me/posts/his-mobile/</guid>
+      <description>楽天モバイルで 1GB 未満の使用でも課金が発生するようになり、他社データ専用 SIM と組み合わせて無料で音声 SIM 代わりとして運用することができなくなった。
+そこで乗り換え先を探していたところ、5 月 20 日から始まった HIS モバイルの自由自在 290 プランという商品が音声 SIM では一番コストパフォーマンスが良さそうだったので、これに乗り換えた。
+選択肢 HIS は HTB エナジーを筆頭に潰れかけの分際でダンピングが趣味みたいな会社の印象があり、少なくとも私は嫌いなので、できれば HIS モバイル以外を使用したいところであった。
+しかしながら運用コストが一番安かったので泣く泣く使うことにした。
+他にあった選択肢としては次のような感じ。一応上からおすすめ順に並べておく。
+前提として私の使用状況を記載すると、月間データ使用量の想定が 6~7GB、音声通話は殆どしない。
+IIJmio 今までずっと使ってきていた IIJmio。eSIM プランの価格が破壊的だが、物理 SIM +音声通話有りでも 4GB で 990 円/月、8GB で 1500 円/月と十分に安い。
+信頼と実績があるし好感を持っているので、ぶっちゃけ IIJmio で良かった。が、冒険心が疼いたので今回はパス。
+LIBMO TOKAI がやってる格安 SIM。株主優待を組み合わせると 100 株でも 350 円/月割引になるので、選択肢としてはだいぶ有りな感じ。
+8GB 音声付き 定価 1518 円/月、株主優待込みで 1168 円/月。もう少し株数を増やせば割引額も増える。
+私はちょっとした理由で TOKAI に対する印象がかなり悪いので生理的に使えなかった。
+TOKAI が嫌いでなく、株主優待を使う人間にとっては非常にオススメできると思う。株主優待使わないなら IIJmio がいい。
+なお、LIBMO の株主優待についてはこちらを参照。
+TOKAI 自体、主要事業が LP ガスやネット回線などでディフェンシブの向きが強く安定的なので、比較的安心して株主優待を享受できると思われる。</description>
+    </item>
+    
+    <item>
+      <title>今年の目標:ブログを消さない</title>
+      <link>https://poyashi.me/posts/first/</link>
+      <pubDate>Thu, 01 Sep 2022 10:00:00 +0900</pubDate>
+      
+      <guid>https://poyashi.me/posts/first/</guid>
+      <description>今まで雑記帳を作っては、3 日後くらいに自分で内容を見返し、気持ち悪すぎて全消しする動きを繰り返している。
+最近 Twitter で mimic がどうの~とか vPixiv がどうの~とか気持ち悪い言論を見てはトイレで吐いてるので、激臭耐性を付けるためにもブログを書いていこうと思う。
+ポリシー上、つとめてインターネット上で自我を出してこなかったが、修行と思って頑張りたい。</description>
+    </item>
+    
+  </channel>
+</rss>

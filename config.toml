@@ -1,0 +1,43 @@
+baseURL = "https://poyashi.me/"
+languageCode = "ja-jp"
+title = "poyashi.me"
+theme = "hugo-ink"
+paginate = 5
+
+copyright = ""
+
+pygmentsstyle = "vs"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+[params]
+	subtitle = "La personne en fin de vie"
+
+	# Optional 64x64 avatar image.
+	avatar = "https://user-images.githubusercontent.com/47537864/187896808-4e216920-5611-41c0-b9bb-57f2c98e1066.jpg"
+
+	# Content types to disable Disqus on.
+	disableDisqusTypes = ["page"]
+	
+	featherIconsCDN = false
+
+	mode = "dark" # "dark" or "auto"
+	# customCSS = "css/custom.css"  # Custom CSS applied to default styles.
+	# customDarkCSS = "css/custom-dark.css"  # Custom styles applied to dark mode css.
+	# customJS = ["js/custom.js", "js/custom1.js"]  # Custom JS scripts.
+
+# Nav.
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "About"
+url = "/about"
+weight = 3
+
+[[menu.main]]
+name = "Contact"
+url = "/contact"
+weight = 3
