@@ -3,7 +3,7 @@ languageCode = "ja-jp"
 title = "poyashi.me"
 theme = "hugo-ink"
 paginate = 5
-
+publishDir  = "docs"
 copyright = ""
 
 pygmentsstyle = "vs"
