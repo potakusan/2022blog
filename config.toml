@@ -11,7 +11,7 @@ pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
 [params]
-	subtitle = "Le personne en fin de vie"
+	subtitle = "La personne en fin de vie"
 
 	# Optional 64x64 avatar image.
 	avatar = "https://user-images.githubusercontent.com/47537864/187896808-4e216920-5611-41c0-b9bb-57f2c98e1066.jpg"
