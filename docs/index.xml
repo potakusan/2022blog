@@ -6,7 +6,25 @@
     <description>Recent content on ./poyashime/</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sat, 03 Sep 2022 20:00:00 +0900</lastBuildDate><atom:link href="https://poyashi.me/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 Sep 2022 23:00:00 +0900</lastBuildDate><atom:link href="https://poyashi.me/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>FPSのピタでんがひっそり受付再開してたけど、やっぱりヤバすぎる</title>
+      <link>https://poyashi.me/posts/fps-pitaden/</link>
+      <pubDate>Sun, 04 Sep 2022 23:00:00 +0900</pubDate>
+      
+      <guid>https://poyashi.me/posts/fps-pitaden/</guid>
+      <description>電気代は上がっているかい?
+昨今の国際情勢のさなか、旧一電でさえも自由料金も続々と燃調費の上限撤廃が進んでいる。
+欧州はおろか資源大国の米国ですら自由化が大失敗しているのに、日本で電力自由化なんてとうてい無理筋な訳だが、そうは言っても今現在、家計負担が増大しているのはやむなきことである。
+そんななか、最近まで新規受付を停止していた FPS(旧:F-Power)のピタでんがヒッソリと申込み受付を再開していたのだが、やっぱり明らかに異常な価格設定で目を引く。
+私は一身上の都合により電力会社を変えられないが、実家はピタでんにするように勧めておいた。この記事はその備忘および所感である。
+私は東海地方在住なので中部エリアの料金設定で書いているが、各自読み替えてほしい。
+下記の前提は、中部電力・従量電灯 B を契約容量 60A で契約しているものとする。
+なお、自由料金で「おとくプラン」だとカテエネポイント 153P または月額料金から 153 円が割引されるが、昨今の原料高を踏まえると近いうちに規制料金(従量電灯 B)のほうが安上がりになる可能性が高いため、ここでは「おとくプラン」は捨て置くものとする。
+500kWh まで一律の料金設定 「ピタでん使いたい放題」は、500 kWh までは一律で \11,200 (以下、ピタでん基本料金と呼称する)が課金されることとなっている。 中部電力の基本料金相当がピタでん基本料金に内包されているものと仮定し、ピタでん基本料金を分解し中部電力と比較すると、次のような表が完成する。
+     中部電力 ピタでん     基本料金  1716 1716   従量料金 &amp;lt;120kWh 21.04 18.968    &amp;lt;300kWh 25.51 18.968    300kWh&amp;lt; 28.46 18.968   2022 年 8 月燃料費調整額 円/kWh 3.66 0   2022 年度再エネ賦課金 円/kWh 3.</description>
+    </item>
+    
     <item>
       <title>団地あるある</title>
       <link>https://poyashi.me/posts/danchi/</link>
@@ -96,7 +114,7 @@ TOKAI 自体、主要事業が LP ガスやネット回線などでディフェ�
 起きたらラジオ体操に行って、
 朝ご飯を食べて、涼しい午前中にスイカを食べながら宿題して、
 午後から友達とプールにいっておもいっきり遊ぶんだ…
-趣味  ビートマニア IIDX(最近 2 年ぶりに復活) 音楽 財テク(日本株と FX と 日経 225 先物と CFD) プログラミング キャンペーン乞食  好きなもの  唐揚げ ゴーヤチャンプルー 団地 BPM128 7014 名村造船所 https://nico.ms/sm40345855  嫌いなもの  人間 人生  </description>
+趣味  ビートマニア IIDX(最近 2 年ぶりに復活) 音楽 財テク(日本株と 日経 225 先物と CFD) プログラミング キャンペーン乞食  好きなもの  唐揚げ ゴーヤチャンプルー 団地 BPM128 7014 名村造船所 https://nico.ms/sm40345855  嫌いなもの  人間 人生  </description>
     </item>
     
     <item>
