@@ -6,7 +6,37 @@
     <description>Recent content in Posts on ./poyashime/</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sat, 10 Sep 2022 18:00:00 +0900</lastBuildDate><atom:link href="https://poyashi.me/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 26 Sep 2022 19:00:00 +0900</lastBuildDate><atom:link href="https://poyashi.me/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2022年9月の思い出</title>
+      <link>https://poyashi.me/posts/202209/</link>
+      <pubDate>Mon, 26 Sep 2022 19:00:00 +0900</pubDate>
+      
+      <guid>https://poyashi.me/posts/202209/</guid>
+      <description>🍻 リアルで起きたこと ブログを書き始めた このブログ。今のところ 1 ヶ月消さないで持ちこたえてるので偉い。
+いつまで持つかは分からんが、こうやって１ヶ月の間にあったことを書き残すだけでも後々振り返ったら面白いかも。
+ネット上でやるのもリスクしかないが。
+ひまわり学級の人とビアガーデンに行った 名鉄百貨店のビアガーデン。足元にゴキブリが出て大騒ぎした。
+昔キモオタだったやつが一児の父になってるのしんどすぎる。
+パソコンを買い替えた これ。まともにゲームやってないから完全に無意味。
+一応負荷もかけてみたがメッシュがやべーケースの割に意外とファンの音も気にならないよ。
+兄貴の結婚式に参加した 兄貴が結婚した。僕と同じく万物をコスパで計るタイプの人間だと思っていたのでかなり意外。
+僕は結婚できるのかなぁ。
+異動が決まった 部署異動。年明けから本社勤務になったので実家を出たのだが、また別の場所に異動することになって意味なかった。
+ゲーセンまで徒歩 5 分くらいなのでメリットはあるが。
+通勤 15 分だったのが 40 分くらいになってしまうみたい。
+仕事おもんないから転職したいけど待遇は良いから居座ってる。
+唐揚げしか食わなかった 月初にふるさと納税で注文していた日置市 鶏もも肉 3.3kg が届いたので、1 ヶ月ひたすら唐揚げ尽くしであった。
+レビューが上の画像の調子なので一体どんな腐った肉が届くものやら、と思っていたが杞憂であった。
+おいしくいただきました。
+⚒️ お勉強 Supabase の勉強をした 現状 BaaS は Firebase に頼り切りだが、やっぱり RDBMS を使いたい場面が多いので PostgreSQL が使える Supabase への移行を検討中。
+オンプレに構築できるのもでかい。リソースを遊ばせている VPS を活用できるし。
+今のところ Authentication で Twitter と連携する際、メールアドレスを取得できないとエラーを吐くので頭を抱えている。
+Supabase がメールアドレスでユーザーを一意に特定している仕様なのが原因ぽい。
+GitHub の Issue でも議題に上がっていた。
+それと公式で用意されている Firebase から migrate する用のスクリプトが SQLInjection 仕放題な仕様になっており、インポートするユーザー名にアポストロフィなどが含まれているとエラーを吐いてきてめんどくさい。</description>
+    </item>
+    
     <item>
       <title>新しいパソコンかった</title>
       <link>https://poyashi.me/posts/newpc-katta/</link>
