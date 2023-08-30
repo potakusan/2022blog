@@ -2,6 +2,7 @@ baseURL = "https://blog.poyashi.me/"
 languageCode = "ja-jp"
 title = "./poyashime/"
 theme = "hugo-ink"
+themesDir = "themes"
 paginate = 5
 publishDir  = "docs"
 copyright = ""
