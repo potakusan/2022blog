@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html class="dark">
+<head>
+	<style>
+	  html.dark body {
+		color: #ddd;
+		background-color: #000;
+	  }
+	</style>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>FirebaseからSupaBase(Self-Hosting)に移行したいけどめんどくさそう - ./poyashime/</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta itemprop="name" content="FirebaseからSupaBase(Self-Hosting)に移行したいけどめんどくさそう">
+<meta itemprop="description" content="いくつか思惑があってBPIManagerで使用しているデータベースを NoSQL から RDBMS に移行したい。
+Open Source で Firebase Alternative な SupaBase が良さそうだったので移行を検討している。
+今後のロードマップを考えがてらメモ書き。
+SupaBase でやりたいこと 転送量削減 BPIManager を作った頃はこんな寿命の長いソフトウェアになるとは思っておらずデータ構造周りのやっつけ感がひどい。
+データストアの構造は上の画像を見てもらったらなんとなくわかってもらえると思う。
+ドキュメントの中にスコアもスコアログも全部入っており、たくさん活用してくれている人だとそれぞれが要素数 1000 くらいの配列になっている。 そもそもスコアとスコアログでデータの重複もあり(端末の IndexedDB に入ってるデータをぶっこ抜いてそのままアップしているだけ)正規化もクソもない。
+こういったネットワーク機能は当初おまけに過ぎなかったので、バックアップさえ取れれば何でも良いみたいな設計思想がすべての原因。
+フロント側でユーザーページを表示するときには、このデータをまるごと fetch で取ってきて必要部分だけ加工して使うみたいな感じになっているので転送量がかなり無駄になっている。
+Cloud Functions などを使ってサーバーサイドで処理してしまえば良いんだけど、せっかくなら JOIN 句とかやりたい放題の Supabase に乗り換えれば良いじゃんと思う。
+*筆者の NoSQL スキルが低すぎて使いこなせていないだけというのは棚上げする。
+維持費用削減 BPIMRanksという実順位サイトが姉妹サイトにあるのだが、上記のデータ構造および課金の仕様が原因で Firebase 上でランキング化を完結させることが極めて難しい。
+そのため、毎晩 Firestore に保存されているスコアデータを全てオンプレの MySQL サーバー上にぶっこ抜いている。
+このせいで、データの読み取り回数が嵩んで課金額も上がっている。
+じゃあ最初からデータストレージを RDBMS にしたらいいじゃんという話。
+すでにやったこと ここからは SupaBase の導入に関するロードマップ
+クラウドかオンプレか SupaBase のオンプレ版コンソールは設定画面が無い(設定したけりゃ直接 config.toml を編集しろというスタンス)
+やっぱり GUI で操作できたほうが楽で良いねとは思う。まあ公式ドキュメントが充実しているのでそこまで問題にはならない。
+クラウドだと料金高い 無料プランもあるけどすぐに上限達しそう。しらんけど。
+普通の有料プランは月額最低 25 ドルからなのでまあまあ高い。"><meta itemprop="datePublished" content="2022-09-21T22:00:00+09:00" />
+<meta itemprop="dateModified" content="2022-09-21T22:00:00+09:00" />
+<meta itemprop="wordCount" content="72">
+<meta itemprop="keywords" content="" /><meta property="og:title" content="FirebaseからSupaBase(Self-Hosting)に移行したいけどめんどくさそう" />
+<meta property="og:description" content="いくつか思惑があってBPIManagerで使用しているデータベースを NoSQL から RDBMS に移行したい。
+Open Source で Firebase Alternative な SupaBase が良さそうだったので移行を検討している。
+今後のロードマップを考えがてらメモ書き。
+SupaBase でやりたいこと 転送量削減 BPIManager を作った頃はこんな寿命の長いソフトウェアになるとは思っておらずデータ構造周りのやっつけ感がひどい。
+データストアの構造は上の画像を見てもらったらなんとなくわかってもらえると思う。
+ドキュメントの中にスコアもスコアログも全部入っており、たくさん活用してくれている人だとそれぞれが要素数 1000 くらいの配列になっている。 そもそもスコアとスコアログでデータの重複もあり(端末の IndexedDB に入ってるデータをぶっこ抜いてそのままアップしているだけ)正規化もクソもない。
+こういったネットワーク機能は当初おまけに過ぎなかったので、バックアップさえ取れれば何でも良いみたいな設計思想がすべての原因。
+フロント側でユーザーページを表示するときには、このデータをまるごと fetch で取ってきて必要部分だけ加工して使うみたいな感じになっているので転送量がかなり無駄になっている。
+Cloud Functions などを使ってサーバーサイドで処理してしまえば良いんだけど、せっかくなら JOIN 句とかやりたい放題の Supabase に乗り換えれば良いじゃんと思う。
+*筆者の NoSQL スキルが低すぎて使いこなせていないだけというのは棚上げする。
+維持費用削減 BPIMRanksという実順位サイトが姉妹サイトにあるのだが、上記のデータ構造および課金の仕様が原因で Firebase 上でランキング化を完結させることが極めて難しい。
+そのため、毎晩 Firestore に保存されているスコアデータを全てオンプレの MySQL サーバー上にぶっこ抜いている。
+このせいで、データの読み取り回数が嵩んで課金額も上がっている。
+じゃあ最初からデータストレージを RDBMS にしたらいいじゃんという話。
+すでにやったこと ここからは SupaBase の導入に関するロードマップ
+クラウドかオンプレか SupaBase のオンプレ版コンソールは設定画面が無い(設定したけりゃ直接 config.toml を編集しろというスタンス)
+やっぱり GUI で操作できたほうが楽で良いねとは思う。まあ公式ドキュメントが充実しているのでそこまで問題にはならない。
+クラウドだと料金高い 無料プランもあるけどすぐに上限達しそう。しらんけど。
+普通の有料プランは月額最低 25 ドルからなのでまあまあ高い。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://poyashi.me/posts/firebase-to-supabase-migrate/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-09-21T22:00:00+09:00" />
+<meta property="article:modified_time" content="2022-09-21T22:00:00+09:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="FirebaseからSupaBase(Self-Hosting)に移行したいけどめんどくさそう"/>
+<meta name="twitter:description" content="いくつか思惑があってBPIManagerで使用しているデータベースを NoSQL から RDBMS に移行したい。
+Open Source で Firebase Alternative な SupaBase が良さそうだったので移行を検討している。
+今後のロードマップを考えがてらメモ書き。
+SupaBase でやりたいこと 転送量削減 BPIManager を作った頃はこんな寿命の長いソフトウェアになるとは思っておらずデータ構造周りのやっつけ感がひどい。
+データストアの構造は上の画像を見てもらったらなんとなくわかってもらえると思う。
+ドキュメントの中にスコアもスコアログも全部入っており、たくさん活用してくれている人だとそれぞれが要素数 1000 くらいの配列になっている。 そもそもスコアとスコアログでデータの重複もあり(端末の IndexedDB に入ってるデータをぶっこ抜いてそのままアップしているだけ)正規化もクソもない。
+こういったネットワーク機能は当初おまけに過ぎなかったので、バックアップさえ取れれば何でも良いみたいな設計思想がすべての原因。
+フロント側でユーザーページを表示するときには、このデータをまるごと fetch で取ってきて必要部分だけ加工して使うみたいな感じになっているので転送量がかなり無駄になっている。
+Cloud Functions などを使ってサーバーサイドで処理してしまえば良いんだけど、せっかくなら JOIN 句とかやりたい放題の Supabase に乗り換えれば良いじゃんと思う。
+*筆者の NoSQL スキルが低すぎて使いこなせていないだけというのは棚上げする。
+維持費用削減 BPIMRanksという実順位サイトが姉妹サイトにあるのだが、上記のデータ構造および課金の仕様が原因で Firebase 上でランキング化を完結させることが極めて難しい。
+そのため、毎晩 Firestore に保存されているスコアデータを全てオンプレの MySQL サーバー上にぶっこ抜いている。
+このせいで、データの読み取り回数が嵩んで課金額も上がっている。
+じゃあ最初からデータストレージを RDBMS にしたらいいじゃんという話。
+すでにやったこと ここからは SupaBase の導入に関するロードマップ
+クラウドかオンプレか SupaBase のオンプレ版コンソールは設定画面が無い(設定したけりゃ直接 config.toml を編集しろというスタンス)
+やっぱり GUI で操作できたほうが楽で良いねとは思う。まあ公式ドキュメントが充実しているのでそこまで問題にはならない。
+クラウドだと料金高い 無料プランもあるけどすぐに上限達しそう。しらんけど。
+普通の有料プランは月額最低 25 ドルからなのでまあまあ高い。"/>
+<link href='https://fonts.googleapis.com/css?family=Playfair+Display:700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" media="screen" href="https://poyashi.me/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://poyashi.me/css/main.css" />
+
+        <link id="dark-scheme" rel="stylesheet" type="text/css" href="https://poyashi.me/css/dark.css" />
+
+	<script src="https://poyashi.me/js/feather.min.js"></script>
+	
+		<script src="https://poyashi.me/js/main.js"></script>
+</head>
+<body>
+	<div class="container wrapper">
+		<div class="header">
+  
+  <div class="avatar">
+    <a href="https://poyashi.me/">
+      <img src="https://user-images.githubusercontent.com/47537864/187896808-4e216920-5611-41c0-b9bb-57f2c98e1066.jpg" alt="./poyashime/" />
+    </a>
+  </div>
+  
+  <h1 class="site-title"><a href="https://poyashi.me/">./poyashime/</a></h1>
+  <div class="site-description"><p>La personne en fin de vie</p><nav class="nav social">
+      <ul class="flat"></ul>
+    </nav>
+  </div>
+
+  <nav class="nav">
+    <ul class="flat">
+      
+      <li>
+        <a href="/">Home</a>
+      </li>
+      
+      <li>
+        <a href="/about">About</a>
+      </li>
+      
+      <li>
+        <a href="/contact">Contact</a>
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+
+
+		<div class="post">
+			<div class="post-header">
+				
+					<div class="meta">
+						<div class="date">
+							<span class="day">21</span>
+							<span class="rest">Sep 2022</span>
+						</div>
+					</div>
+				
+				<div class="matter">
+					<h1 class="title">FirebaseからSupaBase(Self-Hosting)に移行したいけどめんどくさそう</h1>
+				</div>
+			</div>
+					
+			<div class="markdown">
+				<p>いくつか思惑があって<a href="https://bpi.poyashi.me">BPIManager</a>で使用しているデータベースを NoSQL から RDBMS に移行したい。<br>
+Open Source で Firebase Alternative な SupaBase が良さそうだったので移行を検討している。<br>
+今後のロードマップを考えがてらメモ書き。</p>
+<h2 id="supabase-でやりたいこと">SupaBase でやりたいこと</h2>
+<h3 id="転送量削減">転送量削減</h3>
+<p>BPIManager を作った頃はこんな寿命の長いソフトウェアになるとは思っておらずデータ構造周りのやっつけ感がひどい。</p>
+<p><img src="https://user-images.githubusercontent.com/47537864/191527451-7e852d4a-06a0-45be-b379-0bd4475cbdcf.png" alt="chrome_DE9mar103V"></p>
+<p>データストアの構造は上の画像を見てもらったらなんとなくわかってもらえると思う。<br>
+ドキュメントの中にスコアもスコアログも全部入っており、たくさん活用してくれている人だとそれぞれが要素数 1000 くらいの配列になっている。
+そもそもスコアとスコアログでデータの重複もあり(端末の IndexedDB に入ってるデータをぶっこ抜いてそのままアップしているだけ)正規化もクソもない。</p>
+<p>こういったネットワーク機能は当初おまけに過ぎなかったので、バックアップさえ取れれば何でも良いみたいな設計思想がすべての原因。</p>
+<p>フロント側でユーザーページを表示するときには、このデータをまるごと fetch で取ってきて必要部分だけ加工して使うみたいな感じになっているので転送量がかなり無駄になっている。<br>
+Cloud Functions などを使ってサーバーサイドで処理してしまえば良いんだけど、せっかくなら JOIN 句とかやりたい放題の Supabase に乗り換えれば良いじゃんと思う。</p>
+<p>*筆者の NoSQL スキルが低すぎて使いこなせていないだけというのは棚上げする。</p>
+<h3 id="維持費用削減">維持費用削減</h3>
+<p><a href="https://rank.poyashi.me">BPIMRanks</a>という実順位サイトが姉妹サイトにあるのだが、上記のデータ構造および課金の仕様が原因で Firebase 上でランキング化を完結させることが極めて難しい。<br>
+そのため、毎晩 Firestore に保存されているスコアデータを全てオンプレの MySQL サーバー上にぶっこ抜いている。</p>
+<p>このせいで、データの読み取り回数が嵩んで課金額も上がっている。<br>
+じゃあ最初からデータストレージを RDBMS にしたらいいじゃんという話。</p>
+<h2 id="すでにやったこと">すでにやったこと</h2>
+<p>ここからは SupaBase の導入に関するロードマップ</p>
+<h3 id="クラウドかオンプレか">クラウドかオンプレか</h3>
+<p>SupaBase のオンプレ版コンソールは設定画面が無い(設定したけりゃ直接 config.toml を編集しろというスタンス)<br>
+やっぱり GUI で操作できたほうが楽で良いねとは思う。まあ公式ドキュメントが充実しているのでそこまで問題にはならない。</p>
+<h4 id="クラウドだと料金高い">クラウドだと料金高い</h4>
+<p>無料プランもあるけどすぐに上限達しそう。しらんけど。<br>
+普通の有料プランは月額最低 25 ドルからなのでまあまあ高い。<br>
+ドケチなので料金的なスケーリングを考えるとオンプレのほうが嬉しい。</p>
+<p>開発環境はクラウド、本番環境はオンプレが丸いと思う。</p>
+
+			</div>
+
+			<div class="tags">
+				
+					
+				
+			</div></div>
+	</div>
+	<div class="footer wrapper">
+  <nav class="nav">poyashi.me</nav>
+</div>
+
+
+</body>
+</html>
