@@ -1,4 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>./poyashime/</title><link>https://blog.poyashi.me/</link><description>Recent content on ./poyashime/</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Sun, 03 Dec 2023 15:00:00 +0900</lastBuildDate><atom:link href="https://blog.poyashi.me/index.xml" rel="self" type="application/rss+xml"/><item><title>Skullcandy Crusher ANC 2を買ってみた（めっちゃいい）</title><link>https://blog.poyashi.me/posts/skullcandycrusheranc2/</link><pubDate>Sun, 03 Dec 2023 15:00:00 +0900</pubDate><guid>https://blog.poyashi.me/posts/skullcandycrusheranc2/</guid><description>買ってみた 4 年くらい使っていたオーテクの ATH-WS1100 が突然お亡くなりになったので買ってみた。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>./poyashime/</title><link>https://blog.poyashi.me/</link><description>Recent content on ./poyashime/</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Sat, 03 Feb 2024 19:00:00 +0900</lastBuildDate><atom:link href="https://blog.poyashi.me/index.xml" rel="self" type="application/rss+xml"/><item><title>DockerでFactorioのサーバーを立てるメモ</title><link>https://blog.poyashi.me/posts/factorio/</link><pubDate>Sat, 03 Feb 2024 19:00:00 +0900</pubDate><guid>https://blog.poyashi.me/posts/factorio/</guid><description>factoriotools/factorio を使って立てるメモ。
+バージョンアップがなんかうまいことできなかったけど、やっと成功したので。
+https://github.com/factoriotools/factorio-docker
+稼働中のバージョンを落とす:docker stop factorio, docker rm factorio docker pull factoriotools/factorio で最新版のイメージを落としてくる docker run -d -p 34197:34197/udp -p 27015:27015/tcp -v /opt/factorio:/factorio &amp;ndash;name factorio &amp;ndash;restart=always factoriotools/factorio なんか動かなかったら docker ps -a、docker logs factorio でログ見てみる
+(factorio.com 側で Steam と連携できなかったりするとアカウントに購入情報が紐づいてないエラーとか出てるかも)
+map version higher than game version と出る https://forums.factorio.com/viewtopic.php?t=104041
+上のフォーラムの通り
+docker run するときに factoriotools/factorio:1.1.100 みたいな感じでバージョン指定できるがなんか動かんかった
+Steam 側でベータ版を選択するほうが早い
+右クリック → プロパティ → ベータ →1.1.x - Latest 1.1 Experimental (1.1.104)みたいなのを選ぶ
+factorio map version cannot be loaded と出る _autosave[n].</description></item><item><title>Skullcandy Crusher ANC 2を買ってみた（めっちゃいい）</title><link>https://blog.poyashi.me/posts/skullcandycrusheranc2/</link><pubDate>Sun, 03 Dec 2023 15:00:00 +0900</pubDate><guid>https://blog.poyashi.me/posts/skullcandycrusheranc2/</guid><description>買ってみた 4 年くらい使っていたオーテクの ATH-WS1100 が突然お亡くなりになったので買ってみた。
 たまたま公式ストアでブラックフライデーセールをやっていて 37000 円程度で買うことが出来た。
 アマゾンでは定価\43,800 だけど 10%オフクーポンがついているみたい。
 今回は Amazon に在庫がなかったので公式ストアで購入したが、当日発送にも対応していて良い感じ。
