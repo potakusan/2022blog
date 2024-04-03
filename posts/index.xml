@@ -1,4 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on ./poyashime/</title><link>https://blog.poyashi.me/posts/</link><description>Recent content in Posts on ./poyashime/</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Sat, 03 Feb 2024 19:00:00 +0900</lastBuildDate><atom:link href="https://blog.poyashi.me/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>DockerでFactorioのサーバーを立てるメモ</title><link>https://blog.poyashi.me/posts/factorio/</link><pubDate>Sat, 03 Feb 2024 19:00:00 +0900</pubDate><guid>https://blog.poyashi.me/posts/factorio/</guid><description>factoriotools/factorio を使って立てるメモ。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on ./poyashime/</title><link>https://blog.poyashi.me/posts/</link><description>Recent content in Posts on ./poyashime/</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Wed, 03 Apr 2024 18:00:00 +0900</lastBuildDate><atom:link href="https://blog.poyashi.me/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Xiaomi 11T Proのバッテリー交換を無料でしてもらった</title><link>https://blog.poyashi.me/posts/xiaomi-11t-pro-warranty/</link><pubDate>Wed, 03 Apr 2024 18:00:00 +0900</pubDate><guid>https://blog.poyashi.me/posts/xiaomi-11t-pro-warranty/</guid><description>11T Pro のバッテリーが消耗してきた 2022 年の 7 月に買って以来メインスマホとして Xiaomi 11T pro を活用してきたが、2 年も使うと流石にバッテリーの損耗を肌で感じるようになってきた。
+120W 充電対応なので、通常のスマホよりバッテリーにかかる負荷は大きそうだけども、それでも普段遣いには十分なバッテリー持ちなので問題ないといえばないのだが、 ふと 11T Pro に付属している 2 年保証の存在を思い出したので、ダメ元で修理に出してみた。
+結果としては、完全無料でバッテリー(+メイン基盤)の交換をしてもらえた。
+オモテナシ自慢の日本メーカーよりもよっぽどホスピタリティに溢れた対応に涙が止まらない・・・。
+経緯 Xiaomi 11T Pro(および 11T)には、特別保証サービスというものが付属している。
+通常の使用で品質の問題が発生した場合、購入日から 24 ヶ月以内であれば、無料保証サービスを提供することを約束します
+私は IIJmio で 11T Pro を購入したので、上記にいう通信事業者経由での購入に当てはまるみたい。
+サポートを受けるには、Xiaomi Japan のマイページから、電話か、チャットか、メールのいずれかから Xiaomi にコンタクトを取れば良い。
+私は会社の昼休みにチャットで申し込んだ。その場で IMEI などの提出を求められ、5 分程度で修理受付は完了。ヤマト運輸の回収サービスの URL が送られてきて、好きなタイミングで集荷をお願いできるようである（送料は Xiaomi 負担）
+なお、「問題があれば修理する。問題がなかったり、問題があった上で修理をキャンセルする場合はキャンセル料 5500 円が発生する」と 3 度ほど念押しされた。
+有償でバッテリー交換すると 8,000 円程度かかるようで、非公式修理店などの別のチャネルでバッテリー交換しても結局は 7~8000 円程度はかかるので、まあキャンセルすることはないだろうと思い、そのまま申し込み。
+修理申し込みは 2024/3/29(金)に行い、集荷は 2024/3/31(日)に依頼。この間に、スマホを買った際の購入証明書（IIJmio から届いたメールやらマイページのスクリーンショットで OK）を印刷し、スマホをファクトリーリセット。ケースや保護フィルムも外したうえで送付する必要がある模様。 3/31 に発送されたスマホが 4/1 に Xiaomi に到着したとヤマト運輸からメールが来たのもつかの間、翌 4/2 にはヤマト運輸から Xiaomi から荷物お届けのメールを受信した。</description></item><item><title>DockerでFactorioのサーバーを立てるメモ</title><link>https://blog.poyashi.me/posts/factorio/</link><pubDate>Sat, 03 Feb 2024 19:00:00 +0900</pubDate><guid>https://blog.poyashi.me/posts/factorio/</guid><description>factoriotools/factorio を使って立てるメモ。
 バージョンアップがなんかうまいことできなかったけど、やっと成功したので。
 https://github.com/factoriotools/factorio-docker
 稼働中のバージョンを落とす:docker stop factorio, docker rm factorio docker pull factoriotools/factorio で最新版のイメージを落としてくる docker run -d -p 34197:34197/udp -p 27015:27015/tcp -v /opt/factorio:/factorio &amp;ndash;name factorio &amp;ndash;restart=always factoriotools/factorio なんか動かなかったら docker ps -a、docker logs factorio でログ見てみる
@@ -113,18 +124,7 @@ AliExpress で買ってだいたい 6 万円半ばくらい。
 本体に傷がついたり、怪しい ROM を焼かれたりしないかが心配。大人しく中国 ROM 版買って英語で使うなり MoreLocale で日本語化するなりしたほうが良かったかも。OTA もできないし。
 あと、地味に中華製品なのに画面保護フィルムが貼ってないらしい。
 中国のモバイル端末は UMIDIGI ですら保護フィルム貼ってるし意外。Xiaomi 11T Pro には貼ってあったけれど、流石にタブレットサイズだとコストが馬鹿にならないのかも。
-日本の情報がほとんどないので届いたらレビュー記事でも書こうかな。</description></item><item><title>Xiaomi 11T Proのバッテリー交換を無料でしてもらった</title><link>https://blog.poyashi.me/posts/xiaomi-11t-pro-warranty/</link><pubDate>Mon, 27 Mar 2023 18:00:00 +0900</pubDate><guid>https://blog.poyashi.me/posts/xiaomi-11t-pro-warranty/</guid><description>11T Pro のバッテリーが消耗してきた 2022 年の 7 月に買って以来メインスマホとして Xiaomi 11T pro を活用してきたが、2 年も使うと流石にバッテリーの損耗を肌で感じるようになってきた。
-120W 充電対応なので、通常のスマホよりバッテリーにかかる負荷は大きそうだけども、それでも普段遣いには十分なバッテリー持ちなので問題ないといえばないのだが、 ふと 11T Pro に付属している 2 年保証の存在を思い出したので、ダメ元で修理に出してみた。
-結果としては、完全無料でバッテリー(+メイン基盤)の交換をしてもらえた。
-オモテナシ自慢の日本メーカーよりもよっぽどホスピタリティに溢れた対応に涙が止まらない・・・。
-経緯 Xiaomi 11T Pro(および 11T)には、特別保証サービスというものが付属している。
-通常の使用で品質の問題が発生した場合、購入日から 24 ヶ月以内であれば、無料保証サービスを提供することを約束します
-私は IIJmio で 11T Pro を購入したので、上記にいう通信事業者経由での購入に当てはまるみたい。
-サポートを受けるには、Xiaomi Japan のマイページから、電話か、チャットか、メールのいずれかから Xiaomi にコンタクトを取れば良い。
-私は会社の昼休みにチャットで申し込んだ。その場で IMEI などの提出を求められ、5 分程度で修理受付は完了。ヤマト運輸の回収サービスの URL が送られてきて、好きなタイミングで集荷をお願いできるようである（送料は Xiaomi 負担）
-なお、「問題があれば修理する。問題がなかったり、問題があった上で修理をキャンセルする場合はキャンセル料 5500 円が発生する」と 3 度ほど念押しされた。
-有償でバッテリー交換すると 8,000 円程度かかるようで、非公式修理店などの別のチャネルでバッテリー交換しても結局は 7~8000 円程度はかかるので、まあキャンセルすることはないだろうと思い、そのまま申し込み。
-修理申し込みは 2024/3/29(金)に行い、集荷は 2024/3/31(日)に依頼。この間に、スマホを買った際の購入証明書（IIJmio から届いたメールやらマイページのスクリーンショットで OK）を印刷し、スマホをファクトリーリセット。ケースや保護フィルムも外したうえで送付する必要がある模様。 3/31 に発送されたスマホが 4/1 に Xiaomi に到着したとヤマト運輸からメールが来たのもつかの間、翌 4/2 にはヤマト運輸から Xiaomi から荷物お届けのメールを受信した。</description></item><item><title>楽天ひかり（1年無料）の乗り換え先を検討している</title><link>https://blog.poyashi.me/posts/hikaricollabo-norikae/</link><pubDate>Sun, 19 Mar 2023 19:00:00 +0900</pubDate><guid>https://blog.poyashi.me/posts/hikaricollabo-norikae/</guid><description>&lt;p>現在は楽天ひかりを使用しているのだが、5 月末で 1 年無料キャンペーンの期間が終了となるため乗り換え先を探している、そんな話。&lt;/p></description></item><item><title>スカイライン 400R契約してきた</title><link>https://blog.poyashi.me/posts/skyline-yatta/</link><pubDate>Sat, 21 Jan 2023 19:00:00 +0900</pubDate><guid>https://blog.poyashi.me/posts/skyline-yatta/</guid><description>あけましておめでとうございます。
+日本の情報がほとんどないので届いたらレビュー記事でも書こうかな。</description></item><item><title>楽天ひかり（1年無料）の乗り換え先を検討している</title><link>https://blog.poyashi.me/posts/hikaricollabo-norikae/</link><pubDate>Sun, 19 Mar 2023 19:00:00 +0900</pubDate><guid>https://blog.poyashi.me/posts/hikaricollabo-norikae/</guid><description>&lt;p>現在は楽天ひかりを使用しているのだが、5 月末で 1 年無料キャンペーンの期間が終了となるため乗り換え先を探している、そんな話。&lt;/p></description></item><item><title>スカイライン 400R契約してきた</title><link>https://blog.poyashi.me/posts/skyline-yatta/</link><pubDate>Sat, 21 Jan 2023 19:00:00 +0900</pubDate><guid>https://blog.poyashi.me/posts/skyline-yatta/</guid><description>あけましておめでとうございます。
 去る 2022 年 12 月に 400R を発注するだけしてきたが、ようやく本契約をしてきた。
 価格の方は乗り出しで値引き前 700 万くらい。
 実際の価格は大人の事情で割愛。
