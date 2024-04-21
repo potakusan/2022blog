@@ -6,7 +6,20 @@
     <description>Recent content in Posts on ./poyashime/</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Wed, 03 Apr 2024 18:00:00 +0900</lastBuildDate><atom:link href="https://blog.poyashi.me/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 Apr 2024 19:00:00 +0900</lastBuildDate><atom:link href="https://blog.poyashi.me/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>令和6年春期応用情報技術者試験受けてきた</title>
+      <link>https://blog.poyashi.me/posts/2024-ap-shiken/</link>
+      <pubDate>Sun, 21 Apr 2024 19:00:00 +0900</pubDate>
+      
+      <guid>https://blog.poyashi.me/posts/2024-ap-shiken/</guid>
+      <description>今日受けてきた。 落ちてたときに反省するために忘れないうちに答えをメモっとく。
+感想とか ぼく：
+勉強時間:10 時間くらい（マジで知識ないコンピュータアーキテクチャみたいな問題だけ過去問道場で一周した） 職業：団地のインターホンを片っ端からピンポンして押し売りする仕事（あとは趣味で Web 系のサービス運用をしている） 一応 Web でほとんど飯食ってるようなもんだし余裕でしょｗっつって受けたら普通に知らん単語が多くてビビった
+ド文系で 10 進数を 2 進数に変換する方法を知らないので、そういう系の問題が出てたら詰んでた。
+午前問題 問題冊子 僕の回答 正答 正誤 ジャンル 1 エ エ ◯ T 2 エ エ ◯ T 3 ア ア ◯ T 4 エ エ ◯ T 5 ウ ウ ◯ T 6 エ エ ◯ T 7 ア ア ◯ T 8 エ エ ◯ T 9 ウ ウ ◯ T 10 エ エ ◯ T 11 ア ア ◯ T 12 エ ウ × T 13 ア ア ◯ T 14 イ イ ◯ T 15 ウ ウ ◯ T 16 イ イ ◯ T 17 エ イ × T 18 ウ イ × T 19 エ エ ◯ T 20 ア エ × T 21 ウ ウ ◯ T 22 ウ ウ ◯ T 23 ア ア ◯ T 24 エ エ ◯ T 25 ア ア ◯ T 26 ウ ウ ◯ T 27 エ エ ◯ T 28 ア ウ × T 29 ウ ウ ◯ T 30 イ イ ◯ T 31 ア ア ◯ T 32 イ エ × T 33 イ エ × T 34 イ イ ◯ T 35 エ イ × T 36 ウ ウ ◯ T 37 ア ア ◯ T 38 エ イ × T 39 ア イ × T 40 エ ウ × T 41 イ イ ◯ T 42 ア ア ◯ T 43 イ イ ◯ T 44 ウ ウ ◯ T 45 イ イ ◯ T 46 ウ エ × T 47 エ イ × T 48 ウ エ × T 49 イ イ ◯ T 50 イ イ ◯ T 51 ア ア ◯ M 52 ア エ × M 53 ア エ × M 54 ア ア ◯ M 55 ウ ウ ◯ M 56 ア エ × M 57 ウ ウ ◯ M 58 イ ア × M 59 ア ア ◯ M 60 ウ ウ ◯ M 61 ウ ウ ◯ S 62 ア ア ◯ S 63 イ エ × S 64 エ エ ◯ S 65 エ エ ◯ S 66 エ エ ◯ S 67 ウ ウ ◯ S 68 ウ エ × S 69 ア ア ◯ S 70 エ エ ◯ S 71 エ エ ◯ S 72 ア ア ◯ S 73 エ エ ◯ S 74 エ エ ◯ S 75 ウ ウ ◯ S 76 エ エ ◯ S 77 ウ ウ ◯ S 78 ア ア ◯ S 79 ウ ウ ◯ S 80 エ エ ◯ S 分類 正答数 問題数 正答率 T 36 50 72% M 6 10 60% S 18 20 90% トータル 60 80 75% アッこれ過去問道場で見たやつだ！みたいな問題のおかげでテクノロジー問題の点数が底上げされた。</description>
+    </item>
+    
     <item>
       <title>Xiaomi 11T Proのバッテリー交換を無料でしてもらった</title>
       <link>https://blog.poyashi.me/posts/xiaomi-11t-pro-warranty/</link>
