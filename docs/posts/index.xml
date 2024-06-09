@@ -6,7 +6,27 @@
     <description>Recent content in Posts on ./poyashime/</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 21 Apr 2024 19:00:00 +0900</lastBuildDate><atom:link href="https://blog.poyashi.me/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 09 Jun 2024 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.poyashi.me/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lenovo IdeaPad Pro 5i Gen 9(カスタマイズモデル)買った</title>
+      <link>https://blog.poyashi.me/posts/2024-notepc/</link>
+      <pubDate>Sun, 09 Jun 2024 00:00:00 +0900</pubDate>
+      
+      <guid>https://blog.poyashi.me/posts/2024-notepc/</guid>
+      <description>* この記事はアフィリエイトを使用していません
+新しいノート PC が欲しい 主に実家に帰ったとき、出先、旅行先での作業に使いたい。
+今持っているノート PC が 7 年前に大学入学したときに買ったもので、i7 7600U を搭載しているのだがスペックが低すぎて厳しい。
+(Windows が重すぎて使い物にならないので基本的に Ubuntu を使ってる)
+したがって、新しく新調することにした。
+Windows 12 は？ Windows 12 が出るとかなんとか、みたいな話題もあるけど、よほど型落ちのモデルを買わない限りはアプデはできると思う。
+Windows7→10、Windows10→11 みたいに無料アップデートが降ってくるかは分からないけど、まあ最悪ライセンスは consogame とかで買えばいいと思う。
+要件 PC を買うにあたっての主な要件は次の通り
+グラボは不要（StableDiffusion を使いたいのでついていても構わない） バッテリー持ち重視（JEITA Ver3.0 アイドル時で最低 17,18 時間くらいは欲しい） メモリは 32GB 必須 画面解像度は WQHD 以上あるとよい ストレージは M.2 SSD で 1TB あるとよい(512GB でも別にいいけど) 給電形式は USB type-C がいい キーボード配列がウンコじゃないものがいい 本体価格は 20 万円以内(副業の作業のためだけに買う予定なので経費計上したい。一括償却資産として減価償却したい) 主にプログラムをゴリゴリ書くのと写真の RAW 現像に使うのでメモリは多ければ多いほど嬉しい。
+基本的に家のデスクトップ PC がつけっぱなしなので、スペック不足の作業はリモートデスクトップで行えば良いかなと思っている（今の激古ノート PC は全てリモートデスクトップで完結している）
+32GB メモリ搭載となると一気に選択肢が減る。
+候補にあがった PC Zenbook 14 OLED UX3405MA-U9321W https://jp.</description>
+    </item>
+    
     <item>
       <title>令和6年春期応用情報技術者試験受けてきた</title>
       <link>https://blog.poyashi.me/posts/2024-ap-shiken/</link>
