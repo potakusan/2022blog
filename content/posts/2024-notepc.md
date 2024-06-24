@@ -145,8 +145,6 @@ Zenbook 14 OLED UX3405MA と Vivobook S 15 5507QA のいいとこ取りという
 ストア上における今回の PC の納期情報は「最短 1-2 週間程度(ご決済日起算)で出荷予定」であった。
 時系列順でテーブルに示す。
 
-### 2024/6/9(日) 18:20 時点
-
 | タイムスタンプ         | 内容                                                            |
 | ---------------------- | --------------------------------------------------------------- |
 | 2024/6/2(日) AM 3:10   | 注文。自動返信メール受領                                        |
@@ -160,7 +158,16 @@ Zenbook 14 OLED UX3405MA と Vivobook S 15 5507QA のいいとこ取りという
 | 2024/6/9(日) PM 23:59  | (CEVA) Event: Estimated Delivery Date JPTYO - Tokyo             |
 | 2024/6/10(月) AM 8:10  | (CEVA) Event: Pickup Request HKG - Hong Kong                    |
 | 2024/6/10(月) AM 8:10  | (CEVA) Event: Requiested Ship Date HKG - Hong Kong              |
-| 2024/6/10(月) AM 16:55 | (CEVA) Event: Estimated Delivery Date HKG - Hong Kong           |
+| 2024/6/10(月) PM 16:55 | (CEVA) Event: Estimated Delivery Date HKG - Hong Kong           |
+| 2024/6/10(月) PM 23:39 | (CEVA) Event: On-Hand NRT - Tokyo Narita                        |
+| 2024/6/10(月) PM 23:39 | (CEVA) Event: On-Hand NRT - Narita                              |
+| 2024/6/11(火) AM 08:49 | (CEVA) Event: Cleared Customs NRT - Tokyo Narita                |
+| 2024/6/11(火) AM 09:09 | (CEVA) Event: Out For Delivery NRT - Tokyo Narita               |
+| 2024/6/11(火) PM 09:30 | (CEVA) Event: Docs Turned Over To Broker NRT - Tokyo Narita     |
+| 2024/6/11(火) PM 15:00 | (CEVA) Event: Delivered NRT - Tokyo Narita                      |
+| 2024/6/11(火) PM 16:19 | (日通 NEC) 国内配送準備                                         |
+| 2024/6/12(水) -        | (日通 NEC) 配送センター出荷済み（以降、ヤマト運輸で追跡可       |
+| 2024/6/13(木) AM 10:35 | (日通 NEC) お届け先配送                                         |
 
 6/9 時点で 6/10 の予定まで書かれているので、どの便に載せられて日本に来るかなどは早い段階で確定している様子。
 
@@ -176,8 +183,53 @@ Zenbook 14 OLED UX3405MA と Vivobook S 15 5507QA のいいとこ取りという
 
 香港から台北を経由し、台北から成田空港へ送られるみたい。予定値/実績値がそれぞれ表示されるのでわかりやすい。
 
-以下、進捗があれば記す。
+今回は香港 → 台湾、台湾 → 日本で各 1 営業日。日本国内では約 3 営業日配送に要した。  
+最初に日通 NEC の追跡ページに表示される到着予想日と同じか、1,2 営業日短縮される程度で届く模様。
 
 ## 機種レビュー
 
-まだ届いてない。
+### 外観
+
+#### 表面・裏面
+
+![IMG_20240624_120516](https://gist.github.com/assets/47537864/88897b97-f7a6-47b2-b5dd-8eca7f3f42f7)
+
+飾らないデザインなので無骨なのが好きな人にはよいかも。
+
+#### 側面
+
+![IMG_20240624_121307](https://gist.github.com/assets/47537864/f1f8ebd7-6a3c-4a99-8e90-4da7e2dbe44b)
+
+左側面に USB type-C x2、HDMI ポート。右側面は USB type-A x2、SD カードリーダ、イヤホンジャック、各 LED ランプ。  
+USB ポートが充実しているのがとても良い。
+
+#### 見開き
+
+![IMG_20240624_120509_1](https://gist.github.com/assets/47537864/9380c072-fce2-4ccc-8261-cf356117427f)
+
+モニタの発色は有機 EL だけありとても鮮やか。120Hz 駆動にも対応（デフォルトは 60Hz）  
+ベゼルは 2024 年にしては少し太め。
+
+### スペック
+
+#### Cinebench
+
+![Cinebench_tRydwf6E1x](https://gist.github.com/assets/47537864/af9cf9cd-ec11-43b8-8899-b3a270d7cc89)
+
+#### CrystalDiskMark
+
+![DiskMark64_oP6VHw9UYG](https://gist.github.com/assets/47537864/e880bbc6-7ecf-4862-abd9-eadccd53c7b2)
+
+使用されている SSD は MZVL81T0HELB-00BL2(SAMSUNG)
+
+総じて処理はめちゃくちゃ早い。メインで使っている PC（Ryzen 9 5900X）と普段使いではほとんど遜色なし。
+
+ゲームに関しては、オンボードではあるがかなり健闘している。  
+原神は最高設定で 60fps 張り付き。Apex は画面解像度を FHD に下げたうえで設定を最低設定にすれば 60fps は出る。
+14 インチなので画質が悪くても気にならないので、普通に許容範囲。
+
+高負荷時にも、発熱もキーボードおよびタッチパッドとその周辺は全くない。（Fn キーより上あたりはかなり熱くなる）  
+ただし PC 底面は普通に熱くなるので、高負荷時に膝置きして操作するのはちょっとツラいかも。
+
+これから買うなら Copilot Ready の Snapdragon X Elite 搭載 PC がいいぞ！っていう YouTube Shorts が大量に流れてくるけど、よく使うソフトが ARM ネイティブで動かない場合は Core Ultra 搭載 PC で十分だと思う。
+一応、当機種も Copilot ボタンついてます。
