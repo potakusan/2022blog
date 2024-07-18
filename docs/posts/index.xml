@@ -6,7 +6,26 @@
     <description>Recent content in Posts on ./poyashime/</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 09 Jun 2024 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.poyashi.me/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 17 Jul 2024 19:00:00 +0900</lastBuildDate><atom:link href="https://blog.poyashi.me/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DMM.makeの43インチ4Kモニターが気に入ったので2枚目を買った</title>
+      <link>https://blog.poyashi.me/posts/dmmmake_monitor/</link>
+      <pubDate>Wed, 17 Jul 2024 19:00:00 +0900</pubDate>
+      
+      <guid>https://blog.poyashi.me/posts/dmmmake_monitor/</guid>
+      <description>タイトル通り。 DMM は DMM.make という名称でヨソから安く仕入れた商品（モニターやら Web カメラやら毛玉取りやら）を売っている。
+その中には、例示したように 4K モニターもラインナップされており、最小サイズの 43 インチが Amazon で約 4 万円(2024/7/18 で\41,900)、最大サイズの 85 インチが 38 万 5 千円で販売されている。
+85 インチ 38 万 5 千円のコスパは分からないが、43 インチ 5 万円切りはまあまあのコスパだと思い 2 年前に買ったんだが、値段相応ながら安定して使えているので、2 枚目を購入した。
+こんな感じ。ゲームしながらブログ書きながら Twitter 見ながら相場チェックできる。最近ゼンゼロにハマってる
+基本的に TV モニターの流用なのでガチの使い方には全く向かないが、ゆるーくプログラミングしたり、ゆるーくトレードしたり、ゆるーくゲームするくらいならこれくらいがちょうどいい。
+4K もドットバイドットで使えるので無理なく 4K の恩恵を享受できる。27 インチ 4K とかは文字が細かすぎて使い勝手が悪いし。
+激安モニターといえば JAPANNEXT なんかが有名だけど、向こうは安かろう悪かろうなイメージ（周りで不良品に当たって交換してもらったものの、交換したものも不良品だった、というケースを聞いたことがある）。
+いや別に DMM.make も安かろう悪かろうなんだけどね。
+気をつけたいのがこのモニター、型番によってパネルの供給元が違うようで、設定（黒レベル、コントラスト、色温度、ブライトネス等々）を揃えても微妙に同じ色にならないので注意。
+上の画像じゃわからないかもだけど、実際はかなり色味に違いがある。（左が今回買った DKS-4K43DG6、右は 2 年前買った DKS-4K43DG4）
+DKS-4K43DG4 は ADS パネル、DKS-4K43DG6 は VA パネルなのも影響が大きいと思う。同じ型番で揃えるなら問題無いと思うけど、型番違いは注意。個人的には ADS パネルのほうが好みなので、VA 化は少し残念。</description>
+    </item>
+    
     <item>
       <title>Lenovo IdeaPad Pro 5i Gen 9(カスタマイズモデル)買った</title>
       <link>https://blog.poyashi.me/posts/2024-notepc/</link>
@@ -34,6 +53,9 @@ Windows7→10、Windows10→11 みたいに無料アップデートが降って�
       
       <guid>https://blog.poyashi.me/posts/2024-ap-shiken/</guid>
       <description>今日受けてきた。 落ちてたときに反省するために忘れないうちに答えをメモっとく。
+追記 受かってました
+ほぼ自己採点通り（午後だけ自己採点よりちょっと高いかな）
+次は秋期のデータベーススペシャリスト試験を受験予定。
 感想とか ぼく：
 勉強時間:10 時間くらい（マジで知識ないコンピュータアーキテクチャみたいな問題だけ過去問道場で一周した） 職業：団地のインターホンを片っ端からピンポンして押し売りする仕事（あとは趣味で Web 系のサービス運用をしている） 一応 Web でほとんど飯食ってるようなもんだし余裕でしょｗっつって受けたら普通に知らん単語が多くてビビった
 ド文系で 10 進数を 2 進数に変換する方法を知らないので、そういう系の問題が出てたら詰んでた。
